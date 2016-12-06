@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href='bootstrap-3.3.2-dist/css/bootstrap.min.css' />
+    <link rel='stylesheet'  href='css/common.css'/>
+    <link rel='stylesheet'  href='css/personal.css.css'/>
+</head>
+<body>
+<!--网页结构搭建-->
+<!--顶部导航条-->
+<div id="el-top" class="navbar navbar-inverse" >
+    <div class='container'>
+        <div class='navbar-header box1'>
+            <button class='navbar-toggle collapsed' data-toggle='collapse' data-target='#mynav'>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+        </div>
+        <div class='collapse navbar-collapse' id='mynav'>
+            <ul class='nav navbar-nav navbar-right' >
+                <li><a href='#'>首页</a></li>
+                <li id='username'><a href='#'>小强</a></li>
+                <li><a href='#'>充值</a></li>
+                <li><a href='#'>注销</a></li>
+                <li><a href='#'>帮助</a></li>
+                <li><a href='#' id='contract'>联系客服</a></li>
+            </ul>
+            <img src='img/contract.png'  style='width:120px;height:120px;display:none;'/>
+        </div>
+    </div>
+</div>
+
+
+
+<!--nav-->
+<nav class="navbar navbar-default" id='two_nav'>
+    <div class="container">
+        <div class="navbar-header box1">
+            <a class="navbar-brand pic_logo" href="#"><img src='img/logo.png'/></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#"> 我要投资</a></li>
+                <li><a href="#">我要借贷</a></li>
+                <li class="active"><a href="#">个人中心<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">新手指引</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!--主体部分开始-->
+<div class="container">
+    <div class="row">
+        <!--导航菜单-->
+        <div class="col-sm-3">
+            <ul id="menu" class="list-group">
+                <li class="list-group-item ${pageScope.currentMenu=='bid' ? 'active' :'' }">
+                    <a href="#"> <span>投资项目</span></a>
+                </li>
+                <li class="list-group-item">
+                    <a href="javascript:;"><span>借款项目</span></a>
+                    <ul>
+                        <li><a href="#"><span>借款项目</span></a></li>
+                        <li><a href="#"><span>还款明细</span></a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a href="#"><span class="text-title">我的账户</span></a>
+                    <ul class="in">
+                        <li class="active"><a href="personal.html">账户信息</a></li>
+                        <li><a href="#">实名认证</a></li>
+                        <li><a href="#">银行卡管理</a></li>
+                        <li><a href="#">登录记录</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a href="#"><span>资产详情</span></a>
+                    <ul class="in">
+                        <li><a href="#">账户流水</a></li>
+                        <li><a href="#">充值明细</a></li>
+                        <li><a>提现记录</a></li>
+                        <li><a>收款明细</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <a href="#"> <span>个人资料</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- 功能页面 -->
+        <div class="col-sm-9">
+            <div class="panel panel-default">
+                <div class="panel-body el-account">
+                    <div class="el-account-info">
+                        <div class="pull-left el-head-img">
+                            <img class="icon" src="img/head_icon.jpg"  style="border:1px solid #ddd; padding:10px;height:100px;width: 100px"/>
+                        </div>
+                        <div class="pull-left el-head" style="padding-left: 20px">
+                            <p>昵&emsp;称：源代码教育</p>
+                            <p>用户名：小强</p>
+                            <p>最后登录时间：2016-10-25 15:30:10</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div style="margin: 20px 2px; border-top: 1px solid #ddd;padding: 20px 0 0 0;" class="row h4">
+                        <div class="col-sm-4">
+                            总金额：<span class="text-primary">10000元</span>
+                        </div>
+                        <div class="col-sm-4">
+                            可用金额：<span class="text-primary">8000元</span>
+                        </div>
+                        <div class="col-sm-4">
+                            冻结金额：<span class="text-primary">2000元</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;width: 400px;margin:30px auto;">
+                        <a class="btn btn-primary btn-lg" href="#">账户充值</a>
+                        <a class="btn btn-danger btn-lg" href="#">账户提现</a>
+                    </div>
+
+                    <div class="el-account-info">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="el-accoun-auth">
+                                    <div class="el-accoun-auth-left">
+                                        <img src="img/shiming.png" />
+                                    </div>
+                                    <div class="el-accoun-auth-right">
+                                        <h5>实名认证</h5>
+                                        <p>
+                                            <!--
+                                                已认证
+                                                <a href="realAuth.html">查看</a>
+                                            -->
+                                            未认证
+                                            <a href="#">马上认证</a>
+
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <p class="info">实名认证之后才能在平台投资</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="el-accoun-auth">
+                                    <div class="el-accoun-auth-left">
+                                        <img src="img/shouji.jpg" />
+                                    </div>
+                                    <div class="el-accoun-auth-right">
+                                        <h5>手机认证</h5>
+                                        <p>
+                                            已认证
+                                            <a href="#">查看</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <p class="info">可以收到系统操作信息,并增加使用安全性</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="el-accoun-auth">
+                                    <div class="el-accoun-auth-left">
+                                        <img src="img/youxiang.jpg" />
+                                    </div>
+                                    <div class="el-accoun-auth-right">
+                                        <h5>邮箱认证</h5>
+                                        <p>
+                                            已认证
+                                            <a href="#">查看</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <p class="info">您可以设置邮箱来接收重要信息</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="el-accoun-auth">
+                                    <div class="el-accoun-auth-left">
+                                        <img src="img/baozhan.jpg" />
+                                    </div>
+                                    <div class="el-accoun-auth-right">
+                                        <h5>VIP会员</h5>
+                                        <p>
+                                            普通用户
+                                            <a href="#">查看</a>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <p class="info">VIP会员，让你更快捷的投资</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体部分结束-->
+
+
+
+
+
+<!--底部开始-->
+<div class="row el-footer">
+    <div class="container">
+        <div class="col-sm-8">
+            <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+            <p>版权所有：&emsp;2006-2015成都源代码教育咨询有限公司</p>
+            <p>地&emsp;&emsp;址：&emsp;成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+            <p>电&emsp;&emsp;话：&emsp;028-86261949&nbsp; / 400-808-6840&emsp;
+                邮箱：&emsp;yuandaima@itsource.cn</p>
+            <p>
+                <a href="http://www.miitbeian.gov.cn">蜀ICP备14030149号-1</a>&emsp;&emsp;<a
+                    href="http://www.gaj.chengdu.gov.cn">蜀公网安备510114990541</a>
+            </p>
+            <div style="display: inline-block; overflow: hidden; float: left;"></div>
+        </div>
+        <div class="col-sm-2">
+            <div>
+                <p
+                        style="padding-bottom: 15px; font-size: 14px; padding-left: 10px;">官方微博：</p>
+                <a href="###" target="_blank"> <img
+                        src="img/tecent.png" alt="Responsive image">
+                </a> <a href="###" target="_blank"> <img
+                    src="img/sina.png" alt="Responsive image">
+            </a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div>
+                <p
+                        style="padding-bottom: 15px; font-size: 14px; padding-left: 10px;">官方微信：</p>
+                <img src="img/wx.jpg" alt="Responsive image"
+                     class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部结束-->
+
+<script src='jquery/jquery-2.1.3.js'></script>
+<script src='bootstrap-3.3.2-dist/js/bootstrap.js'></script>
+
+
+</body>
+</html>

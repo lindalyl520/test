@@ -1,0 +1,27 @@
+.one {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #337ab7;
+    line-height: 50px;
+}
+.el-tip-info{
+    padding: 20px;
+    background-color: #f4f8fa;
+    border-left: 2px solid #0099dd;
+    margin-bottom: 20px;
+}
+.el-tip-info h3{
+    color: #00a8ff;
+}
+.el-form select{
+    width: 280px;
+}
+.el-form input,.el-form select{
+    width: 280px;
+}
+label{
+    font-weight: bold;
+    max-width: 100%;
+    display: inline-block;
+}
